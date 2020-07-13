@@ -101,4 +101,51 @@
 .form__warning {
   margin-top: 2rem;
 }
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.about__content {
+  background: rgba(95, 39, 6, 0.849);
+  padding: 4rem 2rem;
+  margin: 0 1rem;
+  color: #d1d1d1;
+}
+
+.about__heading {
+  margin-bottom: 1rem;
+}
+
+.about__para {
+  padding: 1rem 0;
+}
+
+.about__close {
+  position: absolute;
+  top: 11rem;
+  right: 2rem;
+  font-size: 1.7rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
 /*# sourceMappingURL=app.css.map */

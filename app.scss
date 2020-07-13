@@ -3,9 +3,9 @@
   padding: 0;
 }
 
-@mixin flexCenter($direction) {
+@mixin flexCenter($direction, $justify) {
   display: flex;
-  justify-content: center;
+  justify-content: $justify;
   align-items: center;
   flex-direction: $direction;
 }
@@ -16,7 +16,7 @@
   background-position: center;
   background-size: cover;
   &__buttons {
-    @include flexCenter(column);
+    @include flexCenter(column, center);
     height: 100%;
     button {
       width: 8rem;
@@ -35,9 +35,9 @@
   width: 100vw;
   height: 100vh;
   background: rgba(128, 128, 128, 0.5);
-  @include flexCenter(column);
+  @include flexCenter(column, center);
   &__content {
-    @include flexCenter(column);
+    @include flexCenter(column, center);
     input {
       margin: 0.5rem 0;
       padding: 0.35rem 0;
@@ -62,6 +62,37 @@
   }
   &__warning {
     margin-top: 2rem;
+  }
+}
+
+.about {
+  @include flexCenter(column, center);
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  text-align: center;
+  // padding: 2rem 2.5rem;
+  &__content {
+    background: rgba(95, 39, 6, 0.849);
+    padding: 4rem 2rem;
+    margin: 0 1rem;
+    color: rgb(209, 209, 209);
+  }
+  &__heading {
+    margin-bottom: 1rem;
+  }
+  &__para {
+    padding: 1rem 0;
+  }
+  &__close {
+    position: absolute;
+    top: 11rem;
+    right: 2rem;
+    font-size: 1.7rem;
+    transform: rotate(45deg);
   }
 
 }

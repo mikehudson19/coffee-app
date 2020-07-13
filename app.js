@@ -27,11 +27,26 @@ signUpBtn.addEventListener('click', () => {
   });
 })
 
+
+aboutBtn.addEventListener('click', () => {
+  const aboutDiv = document.createElement('div');
+  aboutDiv.className = 'about';
+  aboutDiv.innerHTML = `
+      <div class="about__content">
+      <span class="about__close">+</span>
+        <h1 class="about__heading">About Coffee of The Month</h1>
+        <p class="about__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laudantium dolores magni animi aliquam iste officia quasi at repellendus quod?</p>
+        <p class="about__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ad eveniet numquam fugiat? Cupiditate, accusantium.</p>
+      </div>
+  `
+const aboutContainer = document.querySelector('.about-container');
+aboutContainer.appendChild(aboutDiv);
+})
+
 // CLOSE MODAL POP-UP
 document.addEventListener('click', e => {
-  if (e.target.className == 'form__close') {
-    const form = document.querySelector('.form');
-    form.remove();
+  if (e.target.className.includes('close')) {
+    e.target.parentElement.parentElement.remove();
   }
 })
 
