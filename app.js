@@ -34,7 +34,7 @@ aboutBtn.addEventListener('click', () => {
   aboutDiv.innerHTML = `
       <div class="about__content">
       <span class="about__close">+</span>
-        <h1 class="about__heading">About Coffee of The Month</h1>
+        <h1 class="about__heading">About Coffee of The Day</h1>
         <p class="about__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laudantium dolores magni animi aliquam iste officia quasi at repellendus quod?</p>
         <p class="about__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ad eveniet numquam fugiat? Cupiditate, accusantium.</p>
       </div>

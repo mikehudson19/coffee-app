@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.4px;
+}
+
 .showcase {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 29, 7, 0.8)), to(rgba(255, 255, 255, 0.295))), url("images/coffee-background.jpg");
   background: linear-gradient(rgba(44, 29, 7, 0.8), rgba(255, 255, 255, 0.295)), url("images/coffee-background.jpg");
@@ -25,7 +30,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  margin-top: 10rem;
 }
 
 .showcase__buttons button {
@@ -34,8 +39,15 @@
   padding: 0.5rem 0;
 }
 
+.showcase__logo {
+  font-family: 'Marck Script', cursive;
+  color: white;
+  padding: 2rem;
+  font-size: 2.2rem;
+}
+
 .form {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100vw;
@@ -78,7 +90,7 @@
 }
 
 .form__close {
-  position: absolute;
+  position: relative;
   top: 13rem;
   right: 6rem;
   font-size: 1.7rem;
@@ -126,9 +138,9 @@
 }
 
 .about__content {
-  background: rgba(95, 39, 6, 0.849);
+  background: rgba(95, 39, 6, 0.918);
   padding: 4rem 2rem;
-  margin: 0 1rem;
+  margin: 0 1.5rem;
   color: #d1d1d1;
 }
 
@@ -143,7 +155,7 @@
 .about__close {
   position: absolute;
   top: 11rem;
-  right: 2rem;
+  right: 2.8rem;
   font-size: 1.7rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
