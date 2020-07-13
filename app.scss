@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.showcase {
+  background: linear-gradient(rgba(44, 29, 7, 0.8), rgba(255, 255, 255, 0.295)), url('images/coffee-background.jpg');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  &__buttons {
+    @include flexCenter(column);
+    height: 100%;
+    button {
+      width: 8rem;
+      margin: 1rem 0;
+      padding: 0.5rem 0;
+    }
+  }
+}
+
+.form-container {
+  
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(128, 128, 128, 0.5);
+  @include flexCenter(column);
+  &__content {
+    @include flexCenter(column);
+    input {
+      margin: 0.5rem 0;
+      padding: 0.35rem 0;
+    }
+  }
+  &__btn {
+    padding: 0.35rem 0;
+    width: 9.4rem;
+    margin-top: 1rem;
+  }
+  form {
+    background: rgb(212, 212, 212);
+    width: 65vw;
+    height: 50vh;
+  }
+}
+  

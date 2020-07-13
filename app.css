@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.showcase {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 29, 7, 0.8)), to(rgba(255, 255, 255, 0.295))), url("images/coffee-background.jpg");
+  background: linear-gradient(rgba(44, 29, 7, 0.8), rgba(255, 255, 255, 0.295)), url("images/coffee-background.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.showcase__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.showcase__buttons button {
+  width: 8rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(128, 128, 128, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__content input {
+  margin: 0.5rem 0;
+  padding: 0.35rem 0;
+}
+
+.form__btn {
+  padding: 0.35rem 0;
+  width: 9.4rem;
+  margin-top: 1rem;
+}
+
+.form form {
+  background: #d4d4d4;
+  width: 65vw;
+  height: 50vh;
+}
+/*# sourceMappingURL=app.css.map */
