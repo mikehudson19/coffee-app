@@ -47,7 +47,7 @@
     position: absolute;
     top: 13rem;
     right: 6rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     transform: rotate(45deg);
   }
   &__btn {
@@ -59,6 +59,9 @@
     background: rgb(212, 212, 212);
     width: 65vw;
     height: 50vh;
+  }
+  &__warning {
+    margin-top: 2rem;
   }
 
 }
