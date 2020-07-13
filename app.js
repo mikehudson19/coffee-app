@@ -7,6 +7,7 @@ aboutBtn.addEventListener('click', () => {
   div.classList.add('form');
   div.innerHTML = `
   <form action="" class="form__content">
+  <span class="form__close">+</span>
       <input type="text" name="" id="text" placeholder="Name">
       <input type="email" name="" id="email" placeholder="Email">
       <input type="password" name="" id="password" placeholder="Password">

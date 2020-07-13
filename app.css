@@ -77,6 +77,15 @@
   padding: 0.35rem 0;
 }
 
+.form__close {
+  position: absolute;
+  top: 13rem;
+  right: 6rem;
+  font-size: 1.5rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .form__btn {
   padding: 0.35rem 0;
   width: 9.4rem;

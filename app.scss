@@ -26,9 +26,7 @@
   }
 }
 
-.form-container {
-  
-}
+
 
 .form {
   position: absolute;
@@ -45,6 +43,13 @@
       padding: 0.35rem 0;
     }
   }
+  &__close {
+    position: absolute;
+    top: 13rem;
+    right: 6rem;
+    font-size: 1.5rem;
+    transform: rotate(45deg);
+  }
   &__btn {
     padding: 0.35rem 0;
     width: 9.4rem;
@@ -55,5 +60,6 @@
     width: 65vw;
     height: 50vh;
   }
+
 }
   
