@@ -15,7 +15,7 @@ signUpBtn.addEventListener('click', () => {
       <input type="password" name="" id="password" placeholder="Password">
       <input type="password" name="" id="confPassword" placeholder="Confirm Password">
       <button type="submit" class="form__btn">Submit</button>
-      <span class="form__warning"></span>
+      <span class="form__warning form__warning--hide">This is the deault hidden text for the warning.</span>
     </form>
   `
   const formContainer = document.querySelector('.form-container');
@@ -55,30 +55,35 @@ const validateForm = (e) => {
   const name = document.getElementById('name').value;
   const password = document.getElementById('password').value;
   const passwordConfirm = document.getElementById('confPassword').value;
+  let errorMessage = [];
 
   if (!password) {
-    formWarn('You must enter a password.')
-  } else if (password.length < 7) {
-    formWarn('Your password must be at least 8 characters long.');
-  } else if (password !== passwordConfirm) {
-    formWarn('Your passwords must match, bitch.');
-  } else if (password === 'password' || password === 'Password') {
-    formWarn("Your password cannot be 'password'.")
-  } else if (!/\d/.test(password)) {
-    formWarn('Your password needs to include a number.');
-  } else if (/\s/.test(password)) {
-    formWarn('Your password cannot contain spaces.');
-  } else if ((password).includes(name)) {
-    formWarn('Your name cannot be in your password.');
+    errorMessage.push('You must enter a password before submitting.')
   }
-  e.preventDefault();
+  if (password.length < 7) {
+    errorMessage.push('Your password must be at least 8 characters long.')
+  }
+  if (password !== passwordConfirm) {
+    errorMessage.push('Your passwords must match, bitch.')
+  }
+  if (password === 'password' || password === 'Password') {
+    errorMessage.push("Your password cannot be 'password'.")
+  }
+  if (!/\d/.test(password)) {
+    errorMessage.push('Your password needs to include a number.')
+  }
+  if (/\s/.test(password)) {
+    errorMessage.push('Your password cannot contain any spaces.')
+  }
+  if ((password).includes(name)) {
+    errorMessage.push('Your name cannot be in your password.')
+  }
+
+  if (errorMessage.length > 0) {
+    const formWarning = document.querySelector('.form__warning');
+    formWarning.classList.replace('form__warning--hide', 'form__warning--show' )
+    formWarning.innerText = errorMessage[0];
+    e.preventDefault();
+  }
 }
 
-// FORM VALIDATION ERROR WARNING
-const formWarn = (message) => {
-  const formWarning = document.querySelector('.form__warning');
-  formWarning.innerText = message;
-  setTimeout(() => {
-    formWarning.innerText = '';
-  },2000)
-}

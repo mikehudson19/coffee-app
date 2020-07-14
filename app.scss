@@ -10,6 +10,18 @@
   flex-direction: $direction;
 }
 
+@mixin medium-screen {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: 880px) {
+    @content;
+  }
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.4px;
@@ -27,6 +39,19 @@ body {
       width: 8rem;
       margin: 1rem 0;
       padding: 0.5rem 0;
+      background: rgba(85, 34, 5, 0.842);
+      color: rgb(230, 230, 230);
+      @include medium-screen {
+        width: 10rem;
+        padding: 0.8rem 0;
+        font-size: 1rem;
+      }
+      @include large-screen {
+        &:hover {
+          cursor: pointer;
+          background: rgba(160, 65, 10, 0.842);
+        }
+      }
     }
   }
   &__logo {
@@ -34,13 +59,16 @@ body {
     color: white;
     padding: 2rem;
     font-size: 2.2rem;
+    @include medium-screen {
+      font-size: 3rem;
+    }
   }
 }
 
 
 
 .form {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
@@ -48,18 +76,23 @@ body {
   background: rgba(128, 128, 128, 0.5);
   @include flexCenter(column, center);
   &__content {
+    position: relative;
     @include flexCenter(column, center);
+    padding-top: 2.5rem;
     input {
       margin: 0.5rem 0;
       padding: 0.35rem 0;
     }
   }
   &__close {
-    position: relative;
-    top: 13rem;
-    right: 6rem;
+    position: absolute;
+    top: 20px;
+    right: 30px;
     font-size: 1.7rem;
     transform: rotate(45deg);
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__btn {
     padding: 0.35rem 0;
@@ -67,12 +100,28 @@ body {
     margin-top: 1rem;
   }
   form {
-    background: rgb(212, 212, 212);
+    background: rgba(85, 34, 5, 0.842);
+    color: rgb(230, 230, 230);
     width: 65vw;
-    height: 50vh;
+    height: 45vh;
+    border-radius: 5px;
+    @include medium-screen {
+      width: 50vw;
+    }
+    @include large-screen {
+      width: 30vw;
+      height: 65vh;
+    }
   }
   &__warning {
-    margin-top: 2rem;
+    margin: 1rem 1rem;
+    text-align: center;
+    &--hide {
+      visibility: hidden;
+    }
+    &--show {
+      visibility: visible;
+    }
   }
 }
 
@@ -86,10 +135,11 @@ body {
   left: 0;
   text-align: center;
   &__content {
-    background: rgba(95, 39, 6, 0.918);
+    position: relative;
+    background: rgba(85, 34, 5, 0.842);
+    color: rgb(230, 230, 230);
     padding: 4rem 2rem;
     margin: 0 1.5rem;
-    color: rgb(209, 209, 209);
   }
   &__heading {
     margin-bottom: 1rem;
@@ -99,10 +149,13 @@ body {
   }
   &__close {
     position: absolute;
-    top: 11rem;
-    right: 2.8rem;
+    top: 20px;
+    right: 30px;
     font-size: 1.7rem;
     transform: rotate(45deg);
+    &:hover {
+      cursor: pointer;
+    }
   }
 
 }
